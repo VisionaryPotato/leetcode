@@ -1,11 +1,8 @@
-//want to store some values ex. 5,12,6,9,8
-//we could have a node [5| ]->[12| ]->[6| ]->[9| ]->[8| ]->null
-class LinkedList{
+public class LinkedList<T>{
     // node has data and pointer to next object
-    Node head; // refers to first obj
-
+    private Node<T> head; // refers to first obj
     public void insert(int element){
-        Node node = new Node();
+        Node<T> node = new Node<>();
         // assign value to new node.
         node.data = element;
         if(head == null){
@@ -13,7 +10,7 @@ class LinkedList{
             head = node;
         }
         else{
-            Node n = head;
+            Node<T> n = head;
             //looks for a null pointer
             while(n.next != null){
                 n = n.next;
@@ -25,7 +22,7 @@ class LinkedList{
     }
 
     public void print(){
-        Node node = head;
+        Node<T> node = head;
         while (node.next != null){
             System.out.println(node.data);
             //move to next pointer
