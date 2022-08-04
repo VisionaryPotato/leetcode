@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+package src.Arrays;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;

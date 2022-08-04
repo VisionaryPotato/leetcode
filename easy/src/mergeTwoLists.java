@@ -1,25 +1,17 @@
-public class merge{
+package src;
+public class mergeTwoLists {
     /**
      * Definition for singly-linked list.
-     * public class ListNode {
+     * public class src.ListNode {
      *     int val;
-     *     ListNode next;
-     *     ListNode() {}
-     *     ListNode(int val) { this.val = val; }
-     *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+     *     src.ListNode next;
+     *     src.ListNode() {}
+     *     src.ListNode(int val) { this.val = val; }
+     *     src.ListNode(int val, src.ListNode next) { this.val = val; this.next = next; }
      * }
      */
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
-
-    class Solution {
-        public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
             // We are given the head of two sorted Linked lists
 
             ListNode head = null;
@@ -72,5 +64,4 @@ public class merge{
                 head.next = list1;
             return result;
         }
-    }
 }
