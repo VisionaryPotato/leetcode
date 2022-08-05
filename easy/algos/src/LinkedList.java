@@ -1,3 +1,5 @@
+package algos.src;
+
 public class LinkedList<T>{
     // node has data and pointer to next object
     private Node<T> head; // refers to first obj
@@ -50,6 +52,12 @@ public class LinkedList<T>{
         size++;
     }
 
+    public T getStart(){
+        if(head == null){return null;}
+        else
+            return head.data;
+    }
+
     public void delete(){
         Node<T> temp = head;
         //iterate over our list and delete every element: O(n) time-complexity
@@ -65,12 +73,17 @@ public class LinkedList<T>{
 
     public void deleteAt(int index){
         if(index == 0) head = head.next;
-        Node<T> previous = getNodeAt(index-1);
-        Node<T> current = getNodeAt(index);
-        System.out.println("Deleting element " + current.data);
-        current = current.next;
-        previous.next = current;
+        else{
+            Node<T> previous = getNodeAt(index-1);
+            Node<T> current = getNodeAt(index);
+            current = current.next;
+            previous.next = current;
+        }
         --size;
+    }
+
+    public void deleteStart(){
+        deleteAt(0);
     }
 
     public int size(){
