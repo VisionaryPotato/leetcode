@@ -10,9 +10,6 @@ public class testStack {
         stack.push(2);
         stack.push(3);
         stack.push(5);
-
-
-        System.out.println(stack.peak());
         System.out.println();
         stack.show();
 
@@ -26,6 +23,5 @@ public class testStack {
         stack.show();
         stack.clear();
         stack.show();
-
     }
 }

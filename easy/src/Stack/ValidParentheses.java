@@ -1,7 +1,7 @@
 package src.Stack;
 
-import java.util.Stack;
-
+//import java.util.Stack;
+import algos.src.Stack;
 public class ValidParentheses {
 
 

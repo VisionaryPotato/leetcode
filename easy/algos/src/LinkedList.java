@@ -3,7 +3,7 @@ package algos.src;
 public class LinkedList<T>{
     // node has data and pointer to next object
     private Node<T> head; // refers to first obj
-    int size = 0;
+    private int size = 0;
 
     public static class Node<T>{
         T data;
@@ -14,7 +14,8 @@ public class LinkedList<T>{
         // assign value to new node.
         node.data = element;
         // if this is our first object, set the head to the new node
-        if(head == null) head = node;
+        if(head == null)
+            head = node;
         else{
             Node<T> temp = head; //temp is a reference is a copy of our head
             //look for a null pointer & assign the v
@@ -30,7 +31,7 @@ public class LinkedList<T>{
     public void insertAt(int index, T element){
         if (index < 0 || index > size) throw new IndexOutOfBoundsException();
         // if index == 0, we insert at the start of list
-        if (index == 0) insertAtStart(element);
+        else if (index == 0) insertAtStart(element);
         else{
             Node<T> node = new Node<>();
             node.data = element;
@@ -38,8 +39,8 @@ public class LinkedList<T>{
             Node<T> after = getNodeAt(index);
             previous.next = node;
             node.next = after;
-            size++;
         }
+        size++;
     }
 
     public void insertAtStart(T element){
